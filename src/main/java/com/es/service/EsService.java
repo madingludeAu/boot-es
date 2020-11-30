@@ -46,7 +46,6 @@ public class EsService {
             //高亮显示规则
             HighlightBuilder highlightBuilder = new HighlightBuilder().field("fileName").field("fileContent").preTags("<span style='color:red'>").postTags("</span>");
             SearchQuery q = new NativeSearchQueryBuilder()
-                    //.withIndices("test-file").withTypes("file")
                     .withSort(SortBuilders.fieldSort("sort").order(SortOrder.DESC))
                     .withHighlightBuilder(highlightBuilder)
                     .withHighlightFields(new HighlightBuilder.Field("fileName"), new HighlightBuilder.Field("fileContent"))
