@@ -7,6 +7,5 @@ import java.util.List;
 
 public interface FileRepository extends ElasticsearchRepository<DocFile,String> {
 
-    List<DocFile> findDocFileByFileContent(String content);
 
 }

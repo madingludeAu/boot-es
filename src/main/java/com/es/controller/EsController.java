@@ -36,14 +36,22 @@ public class EsController {
     @Autowired
     private EsService esService;
 
-    @GetMapping("getContext")
-    public List<DocFile> getContext(String content){
+    @GetMapping("search")
+    public List<DocFile> search(String content){
 
 
 
        return esService.search(content);
     }
 
+
+    @GetMapping("getContext")
+    public List<DocFile> getContext(String content){
+
+
+
+        return esService.getContext(content);
+    }
 
 
 
