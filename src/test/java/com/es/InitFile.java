@@ -2,7 +2,7 @@ package com.es;
 
 import com.es.entity.DocFile;
 import com.es.repository.FileRepository;
-import com.es.utils.TikaUtil;
+import com.es.utils.FileUtil;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,7 +36,7 @@ public class InitFile {
             String fileContent = "";
             //文件内容
             try{
-                fileContent = TikaUtil.getContext(f);
+                fileContent = FileUtil.getContext(f);
             }catch (Exception e){
 
                 e.printStackTrace();

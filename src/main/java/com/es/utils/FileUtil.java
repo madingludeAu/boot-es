@@ -6,10 +6,10 @@ import org.slf4j.LoggerFactory;
 
 import java.io.*;
 
-public class TikaUtil {
+public class FileUtil {
 
 
-    private static  Logger logger = LoggerFactory.getLogger(TikaUtil.class);
+    private static  Logger logger = LoggerFactory.getLogger(FileUtil.class);
 
     //读取txt文件内容
     public static String getContext(File file)throws  IOException{
