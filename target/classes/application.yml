@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: elasticsearch #指定服务名
+  data:
+    elasticsearch:
+      cluster-nodes: localhost:9300
+
