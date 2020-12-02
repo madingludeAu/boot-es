@@ -1,11 +1,72 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.es.mapper.ShebeiMapper">
-
+    <sql id="shebeiColumns">
+		a.id AS "id",
+		a.create_by AS "createBy.id",
+		a.create_date AS "createDate",
+		a.update_by AS "updateBy.id",
+		a.update_date AS "updateDate",
+		a.remarks AS "remarks",
+		a.del_flag AS "delFlag",
+		a.tiaoma AS "tiaoma",
+		a.name AS "name",
+		a.shebeilxid AS "shebeilxid",
+		a.shebeiglyid AS "shebeiglyid",
+		a.gudingzcbh AS "gudingzcbh",
+		a.gongzuorlid AS "gongzuorlid",
+		a.yuyuefw AS "yuyuefw",
+		a.yuyuezdsc AS "yuyuezdsc",
+		a.cunfanwzid AS "cunfanwzid",
+		a.shebeixh AS "shebeixh",
+		a.ketizid AS "ketizid",
+		a.shebeiytsm AS "shebeiytsm",
+		a.shebeidacfc AS "shebeidacfc",
+		a.shebeifzrid AS "shebeifzrid",
+		a.filecode AS "filecode",
+		a.baoyangyq AS "baoyangyq",
+		a.shoufeibz AS "shoufeibz",
+		a.shebeiztdict AS "shebeiztdict",
+		a.shebeishztdict AS "shebeishztdict",
+		a.qijianhczq AS "qijianhczq",
+		a.qijianhczqdw AS "qijianhczqdw",
+		a.hechaff AS "hechaff",
+		a.shoucihcrq AS "shoucihcrq",
+		a.hechar AS "hechar",
+		a.hechaxm AS "hechaxm",
+		a.xiacihcrq AS "xiacihcrq",
+		a.cankaowjdw AS "cankaowjdw",
+		a.youxiaorq AS "youxiaorq",
+		a.jiandingjzzq AS "jiandingjzzq",
+		a.zhouqidw AS "zhouqidw",
+		a.shoucijdjzrq AS "shoucijdjzrq",
+		a.dingjianzq AS "dingjianzq",
+		a.xianyongfw AS "xianyongfw",
+		a.jiliangfzrid AS "jiliangfzrid",
+		a.daoqitqtxsj AS "daoqitqtxsj",
+		a.jiandingjzyq AS "jiandingjzyq",
+		a.jiandingztdict AS "jiandingztdict",
+		a.zhizaos AS "zhizaos",
+		a.gongyignsid AS "gongyignsid",
+		a.chuchangbh AS "chuchangbh",
+		a.chuchangrq AS "chuchangrq",
+		a.gouzhirq AS "gouzhirq",
+		a.gouzhije AS "gouzhije",
+		a.zijinly AS "zijinly",
+		a.zhibaoq AS "zhibaoq",
+		a.shiyongdwid AS "shiyongdwid",
+		a.jiandingyid AS "jiandingyid",
+		a.yuyuedj as "yuyuedj",
+		a.gaonanduyydj as "gaonanduyydj",
+		a.shifoudy as "shifoudy",
+		a.zhichiyylx as "zhichiyylx"
+	</sql>
 
 
     <select id="findList" resultType="com.es.entity.Shebei">
-      select * from zy_shebei
+      select
+      <include refid="shebeiColumns"/>
+      from zy_shebei a
     </select>
 
 

@@ -1,7 +1,7 @@
 package com.es.entity;
 
 
-import lombok.Data;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 
@@ -9,7 +9,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 @Document(indexName = "github",type = "shebei")
-@Data
+
 public class Shebei implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -17,7 +17,10 @@ public class Shebei implements Serializable {
     private String id;
 
     protected String remarks;	// 备注
+
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     protected Date createDate;	// 创建日期
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     protected Date updateDate;	// 更新日期
     protected String delFlag; 	// 删除标记（0：正常；1：删除；2：审核）
     protected String isAudit="0"; 	// 判定是否是流程审批（0：否；1：是；）
@@ -103,4 +106,677 @@ public class Shebei implements Serializable {
     private String shifoudy;//是否对外预约和展示
 
     private String zhichiyylx;//支持预约类型 （数据存储用这个字段）
+
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getRemarks() {
+        return remarks;
+    }
+
+    public void setRemarks(String remarks) {
+        this.remarks = remarks;
+    }
+
+    public Date getCreateDate() {
+        return createDate;
+    }
+
+    public void setCreateDate(Date createDate) {
+        this.createDate = createDate;
+    }
+
+    public Date getUpdateDate() {
+        return updateDate;
+    }
+
+    public void setUpdateDate(Date updateDate) {
+        this.updateDate = updateDate;
+    }
+
+    public String getDelFlag() {
+        return delFlag;
+    }
+
+    public void setDelFlag(String delFlag) {
+        this.delFlag = delFlag;
+    }
+
+    public String getIsAudit() {
+        return isAudit;
+    }
+
+    public void setIsAudit(String isAudit) {
+        this.isAudit = isAudit;
+    }
+
+    public String getOperationType() {
+        return operationType;
+    }
+
+    public void setOperationType(String operationType) {
+        this.operationType = operationType;
+    }
+
+    public String getTiaoma() {
+        return tiaoma;
+    }
+
+    public void setTiaoma(String tiaoma) {
+        this.tiaoma = tiaoma;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getShebeilxid() {
+        return shebeilxid;
+    }
+
+    public void setShebeilxid(String shebeilxid) {
+        this.shebeilxid = shebeilxid;
+    }
+
+    public String getShebeilxmc() {
+        return shebeilxmc;
+    }
+
+    public void setShebeilxmc(String shebeilxmc) {
+        this.shebeilxmc = shebeilxmc;
+    }
+
+    public String getShebeiglyid() {
+        return shebeiglyid;
+    }
+
+    public void setShebeiglyid(String shebeiglyid) {
+        this.shebeiglyid = shebeiglyid;
+    }
+
+    public String getShebeiglymc() {
+        return shebeiglymc;
+    }
+
+    public void setShebeiglymc(String shebeiglymc) {
+        this.shebeiglymc = shebeiglymc;
+    }
+
+    public String getGudingzcbh() {
+        return gudingzcbh;
+    }
+
+    public void setGudingzcbh(String gudingzcbh) {
+        this.gudingzcbh = gudingzcbh;
+    }
+
+    public String getGongzuorlid() {
+        return gongzuorlid;
+    }
+
+    public void setGongzuorlid(String gongzuorlid) {
+        this.gongzuorlid = gongzuorlid;
+    }
+
+    public String getGongzuorlmc() {
+        return gongzuorlmc;
+    }
+
+    public void setGongzuorlmc(String gongzuorlmc) {
+        this.gongzuorlmc = gongzuorlmc;
+    }
+
+    public String getYuyuefw() {
+        return yuyuefw;
+    }
+
+    public void setYuyuefw(String yuyuefw) {
+        this.yuyuefw = yuyuefw;
+    }
+
+    public String getYuyuezdsc() {
+        return yuyuezdsc;
+    }
+
+    public void setYuyuezdsc(String yuyuezdsc) {
+        this.yuyuezdsc = yuyuezdsc;
+    }
+
+    public String getCunfanwzid() {
+        return cunfanwzid;
+    }
+
+    public void setCunfanwzid(String cunfanwzid) {
+        this.cunfanwzid = cunfanwzid;
+    }
+
+    public String getCunfanwzmc() {
+        return cunfanwzmc;
+    }
+
+    public void setCunfanwzmc(String cunfanwzmc) {
+        this.cunfanwzmc = cunfanwzmc;
+    }
+
+    public String getShebeixh() {
+        return shebeixh;
+    }
+
+    public void setShebeixh(String shebeixh) {
+        this.shebeixh = shebeixh;
+    }
+
+    public String getKetizid() {
+        return ketizid;
+    }
+
+    public void setKetizid(String ketizid) {
+        this.ketizid = ketizid;
+    }
+
+    public String getKetizmc() {
+        return ketizmc;
+    }
+
+    public void setKetizmc(String ketizmc) {
+        this.ketizmc = ketizmc;
+    }
+
+    public String getShebeiytsm() {
+        return shebeiytsm;
+    }
+
+    public void setShebeiytsm(String shebeiytsm) {
+        this.shebeiytsm = shebeiytsm;
+    }
+
+    public String getShebeidacfc() {
+        return shebeidacfc;
+    }
+
+    public void setShebeidacfc(String shebeidacfc) {
+        this.shebeidacfc = shebeidacfc;
+    }
+
+    public String getShebeifzrid() {
+        return shebeifzrid;
+    }
+
+    public void setShebeifzrid(String shebeifzrid) {
+        this.shebeifzrid = shebeifzrid;
+    }
+
+    public String getShebeifzrmc() {
+        return shebeifzrmc;
+    }
+
+    public void setShebeifzrmc(String shebeifzrmc) {
+        this.shebeifzrmc = shebeifzrmc;
+    }
+
+    public String getFilecode() {
+        return filecode;
+    }
+
+    public void setFilecode(String filecode) {
+        this.filecode = filecode;
+    }
+
+    public String getShoufeibz() {
+        return shoufeibz;
+    }
+
+    public void setShoufeibz(String shoufeibz) {
+        this.shoufeibz = shoufeibz;
+    }
+
+    public String getBaoyangyq() {
+        return baoyangyq;
+    }
+
+    public void setBaoyangyq(String baoyangyq) {
+        this.baoyangyq = baoyangyq;
+    }
+
+    public String getShebeiztdict() {
+        return shebeiztdict;
+    }
+
+    public void setShebeiztdict(String shebeiztdict) {
+        this.shebeiztdict = shebeiztdict;
+    }
+
+    public String getShebeishztdict() {
+        return shebeishztdict;
+    }
+
+    public void setShebeishztdict(String shebeishztdict) {
+        this.shebeishztdict = shebeishztdict;
+    }
+
+    public String getQijianhczq() {
+        return qijianhczq;
+    }
+
+    public void setQijianhczq(String qijianhczq) {
+        this.qijianhczq = qijianhczq;
+    }
+
+    public String getQijianhczqdw() {
+        return qijianhczqdw;
+    }
+
+    public void setQijianhczqdw(String qijianhczqdw) {
+        this.qijianhczqdw = qijianhczqdw;
+    }
+
+    public String getHechaff() {
+        return hechaff;
+    }
+
+    public void setHechaff(String hechaff) {
+        this.hechaff = hechaff;
+    }
+
+    public String getShoucihcrq() {
+        return shoucihcrq;
+    }
+
+    public void setShoucihcrq(String shoucihcrq) {
+        this.shoucihcrq = shoucihcrq;
+    }
+
+    public String getHechar() {
+        return hechar;
+    }
+
+    public void setHechar(String hechar) {
+        this.hechar = hechar;
+    }
+
+    public String getHechaxm() {
+        return hechaxm;
+    }
+
+    public void setHechaxm(String hechaxm) {
+        this.hechaxm = hechaxm;
+    }
+
+    public String getXiacihcrq() {
+        return xiacihcrq;
+    }
+
+    public void setXiacihcrq(String xiacihcrq) {
+        this.xiacihcrq = xiacihcrq;
+    }
+
+    public String getCankaowjdw() {
+        return cankaowjdw;
+    }
+
+    public void setCankaowjdw(String cankaowjdw) {
+        this.cankaowjdw = cankaowjdw;
+    }
+
+    public String getYouxiaorq() {
+        return youxiaorq;
+    }
+
+    public void setYouxiaorq(String youxiaorq) {
+        this.youxiaorq = youxiaorq;
+    }
+
+    public String getJiandingjzzq() {
+        return jiandingjzzq;
+    }
+
+    public void setJiandingjzzq(String jiandingjzzq) {
+        this.jiandingjzzq = jiandingjzzq;
+    }
+
+    public String getZhouqidw() {
+        return zhouqidw;
+    }
+
+    public void setZhouqidw(String zhouqidw) {
+        this.zhouqidw = zhouqidw;
+    }
+
+    public String getShoucijdjzrq() {
+        return shoucijdjzrq;
+    }
+
+    public void setShoucijdjzrq(String shoucijdjzrq) {
+        this.shoucijdjzrq = shoucijdjzrq;
+    }
+
+    public String getDingjianzq() {
+        return dingjianzq;
+    }
+
+    public void setDingjianzq(String dingjianzq) {
+        this.dingjianzq = dingjianzq;
+    }
+
+    public String getXianyongfw() {
+        return xianyongfw;
+    }
+
+    public void setXianyongfw(String xianyongfw) {
+        this.xianyongfw = xianyongfw;
+    }
+
+    public String getJiliangfzrid() {
+        return jiliangfzrid;
+    }
+
+    public void setJiliangfzrid(String jiliangfzrid) {
+        this.jiliangfzrid = jiliangfzrid;
+    }
+
+    public String getJiliangfzrmc() {
+        return jiliangfzrmc;
+    }
+
+    public void setJiliangfzrmc(String jiliangfzrmc) {
+        this.jiliangfzrmc = jiliangfzrmc;
+    }
+
+    public String getDaoqitqtxsj() {
+        return daoqitqtxsj;
+    }
+
+    public void setDaoqitqtxsj(String daoqitqtxsj) {
+        this.daoqitqtxsj = daoqitqtxsj;
+    }
+
+    public String getJiandingjzyq() {
+        return jiandingjzyq;
+    }
+
+    public void setJiandingjzyq(String jiandingjzyq) {
+        this.jiandingjzyq = jiandingjzyq;
+    }
+
+    public String getJiandingztdict() {
+        return jiandingztdict;
+    }
+
+    public void setJiandingztdict(String jiandingztdict) {
+        this.jiandingztdict = jiandingztdict;
+    }
+
+    public String getZhizaos() {
+        return zhizaos;
+    }
+
+    public void setZhizaos(String zhizaos) {
+        this.zhizaos = zhizaos;
+    }
+
+    public String getGongyignsid() {
+        return gongyignsid;
+    }
+
+    public void setGongyignsid(String gongyignsid) {
+        this.gongyignsid = gongyignsid;
+    }
+
+    public String getGongyignsmc() {
+        return gongyignsmc;
+    }
+
+    public void setGongyignsmc(String gongyignsmc) {
+        this.gongyignsmc = gongyignsmc;
+    }
+
+    public String getChuchangbh() {
+        return chuchangbh;
+    }
+
+    public void setChuchangbh(String chuchangbh) {
+        this.chuchangbh = chuchangbh;
+    }
+
+    public String getChuchangrq() {
+        return chuchangrq;
+    }
+
+    public void setChuchangrq(String chuchangrq) {
+        this.chuchangrq = chuchangrq;
+    }
+
+    public String getGouzhirq() {
+        return gouzhirq;
+    }
+
+    public void setGouzhirq(String gouzhirq) {
+        this.gouzhirq = gouzhirq;
+    }
+
+    public String getGouzhije() {
+        return gouzhije;
+    }
+
+    public void setGouzhije(String gouzhije) {
+        this.gouzhije = gouzhije;
+    }
+
+    public String getZijinly() {
+        return zijinly;
+    }
+
+    public void setZijinly(String zijinly) {
+        this.zijinly = zijinly;
+    }
+
+    public String getZhibaoq() {
+        return zhibaoq;
+    }
+
+    public void setZhibaoq(String zhibaoq) {
+        this.zhibaoq = zhibaoq;
+    }
+
+    public String getShiyongdwid() {
+        return shiyongdwid;
+    }
+
+    public void setShiyongdwid(String shiyongdwid) {
+        this.shiyongdwid = shiyongdwid;
+    }
+
+    public String getShiyongdwmc() {
+        return shiyongdwmc;
+    }
+
+    public void setShiyongdwmc(String shiyongdwmc) {
+        this.shiyongdwmc = shiyongdwmc;
+    }
+
+    public String getJiandingyid() {
+        return jiandingyid;
+    }
+
+    public void setJiandingyid(String jiandingyid) {
+        this.jiandingyid = jiandingyid;
+    }
+
+    public String getJiandingymc() {
+        return jiandingymc;
+    }
+
+    public void setJiandingymc(String jiandingymc) {
+        this.jiandingymc = jiandingymc;
+    }
+
+    public String getMeiriyykssj() {
+        return meiriyykssj;
+    }
+
+    public void setMeiriyykssj(String meiriyykssj) {
+        this.meiriyykssj = meiriyykssj;
+    }
+
+    public String getMeiriyyjssj() {
+        return meiriyyjssj;
+    }
+
+    public void setMeiriyyjssj(String meiriyyjssj) {
+        this.meiriyyjssj = meiriyyjssj;
+    }
+
+    public String getYuyuezxdw() {
+        return yuyuezxdw;
+    }
+
+    public void setYuyuezxdw(String yuyuezxdw) {
+        this.yuyuezxdw = yuyuezxdw;
+    }
+
+    public String getBukeyysj() {
+        return bukeyysj;
+    }
+
+    public void setBukeyysj(String bukeyysj) {
+        this.bukeyysj = bukeyysj;
+    }
+
+    public String getBukeyyjssj() {
+        return bukeyyjssj;
+    }
+
+    public void setBukeyyjssj(String bukeyyjssj) {
+        this.bukeyyjssj = bukeyyjssj;
+    }
+
+    public String getShebeizzid() {
+        return shebeizzid;
+    }
+
+    public void setShebeizzid(String shebeizzid) {
+        this.shebeizzid = shebeizzid;
+    }
+
+    public String getShebeizzmc() {
+        return shebeizzmc;
+    }
+
+    public void setShebeizzmc(String shebeizzmc) {
+        this.shebeizzmc = shebeizzmc;
+    }
+
+    public String getQijianhcdqtqtxsj() {
+        return qijianhcdqtqtxsj;
+    }
+
+    public void setQijianhcdqtqtxsj(String qijianhcdqtqtxsj) {
+        this.qijianhcdqtqtxsj = qijianhcdqtqtxsj;
+    }
+
+    public String getButtonType() {
+        return buttonType;
+    }
+
+    public void setButtonType(String buttonType) {
+        this.buttonType = buttonType;
+    }
+
+    public String getFlowtype() {
+        return flowtype;
+    }
+
+    public void setFlowtype(String flowtype) {
+        this.flowtype = flowtype;
+    }
+
+    public Boolean getShebeigly() {
+        return isShebeigly;
+    }
+
+    public void setShebeigly(Boolean shebeigly) {
+        isShebeigly = shebeigly;
+    }
+
+    public String getShebeixxbgsqid() {
+        return shebeixxbgsqid;
+    }
+
+    public void setShebeixxbgsqid(String shebeixxbgsqid) {
+        this.shebeixxbgsqid = shebeixxbgsqid;
+    }
+
+    public String getGaonanduyydj() {
+        return gaonanduyydj;
+    }
+
+    public void setGaonanduyydj(String gaonanduyydj) {
+        this.gaonanduyydj = gaonanduyydj;
+    }
+
+    public String getYuyuesjdatastr() {
+        return yuyuesjdatastr;
+    }
+
+    public void setYuyuesjdatastr(String yuyuesjdatastr) {
+        this.yuyuesjdatastr = yuyuesjdatastr;
+    }
+
+    public String getShouzhangzp() {
+        return shouzhangzp;
+    }
+
+    public void setShouzhangzp(String shouzhangzp) {
+        this.shouzhangzp = shouzhangzp;
+    }
+
+    public String getCanshu() {
+        return canshu;
+    }
+
+    public void setCanshu(String canshu) {
+        this.canshu = canshu;
+    }
+
+    public String getYuyuedj() {
+        return yuyuedj;
+    }
+
+    public void setYuyuedj(String yuyuedj) {
+        this.yuyuedj = yuyuedj;
+    }
+
+    public String getFormtype() {
+        return formtype;
+    }
+
+    public void setFormtype(String formtype) {
+        this.formtype = formtype;
+    }
+
+    public String getShifoudy() {
+        return shifoudy;
+    }
+
+    public void setShifoudy(String shifoudy) {
+        this.shifoudy = shifoudy;
+    }
+
+    public String getZhichiyylx() {
+        return zhichiyylx;
+    }
+
+    public void setZhichiyylx(String zhichiyylx) {
+        this.zhichiyylx = zhichiyylx;
+    }
 }
