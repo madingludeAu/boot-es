@@ -32,8 +32,8 @@ public class EsService {
     private ElasticsearchTemplate elasticsearchTemplate;
 
 
-        @Autowired
-        private FileRepository fileRepository;
+    @Autowired
+    private FileRepository fileRepository;
 
         /**
          * 高亮查询
