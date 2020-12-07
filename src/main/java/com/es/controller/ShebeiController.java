@@ -36,6 +36,7 @@ public class ShebeiController {
         PrintWriter writer=response.getWriter();
         writer.write(
                 "<script type=\"text/javascript\">alert('导出失败，请重试！...');</script>");
+        response.setStatus(500);
         writer.flush();
         writer.close();
     }

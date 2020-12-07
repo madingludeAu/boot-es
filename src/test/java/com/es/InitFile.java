@@ -2,7 +2,7 @@ package com.es;
 
 import com.es.entity.DocFile;
 import com.es.repository.FileRepository;
-import com.es.utils.FileUtil;
+import com.es.utils.fileUtils.FileUtil;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
