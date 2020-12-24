@@ -115,7 +115,7 @@ public class ExcelUtil {
      * 读取Excel的内容
      *
      * @param fileType 文件类型，xls或xlsx
-     * @param startRows 开始读取行数，比喻行头不需要读入 忽略的行数为1
+     * @param startRows 开始读取行数，比如行头不需要读入 忽略的行数为1
      * @param ignoreRowBlank 是否忽略空行
      * @param is 文件输入流
      * @return 读出的Excel中数据的内容

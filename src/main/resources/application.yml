@@ -20,3 +20,7 @@ mybatis:
 logging:
   level:
     com.es.mapper : debug
+
+test1: 123
+test2: 345
+test3: 456
